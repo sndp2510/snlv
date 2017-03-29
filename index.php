@@ -1,8 +1,9 @@
 <?php
+session_start();
 if(isset($_SESSION['user'])) {
 ?>
 
-<h1>Welcome <?php echo $_SESSION['user'].name?></h1>
+<h1>Welcome <?php echo $_SESSION['user']['name']?></h1>
 
 <?php
 } else {
@@ -28,6 +29,7 @@ if(isset($_SESSION['user'])) {
                     success: function(data, status){
                         console.log(data);
                         console.log(status);
+                        location.reload();
                     },
                     error: function (jqXHR, exception) {
                         console.log(jqXHR);
