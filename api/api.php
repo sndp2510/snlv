@@ -1,6 +1,17 @@
 <?php
 require "../vendor/autoload.php";
+session_start();
 use \Slim\Slim;
+
+// check user logged in
+if(! isset($_SESSION['user'])) {
+    http_response_code(400);
+    header('Content-Type: application/json');
+    $err = array('error' => 'Unauthorized');
+    echo json_encode($err, JSON_PRETTY_PRINT);
+    die;
+}
+
 
 $config = [
     'settings' => [
