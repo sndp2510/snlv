@@ -4,6 +4,7 @@ if(isset($_SESSION['user'])) {
 ?>
 
 <h1>Welcome <?php echo $_SESSION['user']['name']?></h1>
+<a href='/api/v1/hello/a'>/api/v1/hello/a</a>
 
 <?php
 } else {

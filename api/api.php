@@ -16,7 +16,6 @@ if(! isset($_SESSION['user'])) {
 $config = [
     'settings' => [
         'displayErrorDetails' => true,
-        'determineRouteBeforeAppMiddleware' => true,
     ],
 ];
 
