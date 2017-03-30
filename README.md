@@ -1,2 +1,0 @@
-# snlv
-bhai gazab
